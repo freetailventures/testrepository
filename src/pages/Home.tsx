@@ -1,7 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Users, TrendingUp } from 'lucide-react';
 import { motion } from 'framer-motion';
+import Lottie from 'lottie-react';
+
+// Import animations
+import studyAnimation from '../assets/animations/study.json';
+import examAnimation from '../assets/animations/exam.json';
+import successAnimation from '../assets/animations/success.json';
+import rankingAnimation from '../assets/animations/ranking.json';
 
 const Home: React.FC = () => {
   const fadeInUp = {
@@ -43,8 +49,8 @@ const Home: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
         >
-          <div className="flex justify-center items-center h-48 text-indigo-600">
-            <CheckCircle size={64} />
+          <div className="h-48 mb-4">
+            <Lottie animationData={studyAnimation} loop={true} />
           </div>
           <h2 className="text-xl font-semibold mb-2 text-center">Smart Learning</h2>
           <p className="text-gray-600 text-center">Personalized study plans and adaptive learning paths</p>
@@ -57,8 +63,8 @@ const Home: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 0.1 }}
         >
-          <div className="flex justify-center items-center h-48 text-indigo-600">
-            <TrendingUp size={64} />
+          <div className="h-48 mb-4">
+            <Lottie animationData={examAnimation} loop={true} />
           </div>
           <h2 className="text-xl font-semibold mb-2 text-center">Practice Tests</h2>
           <p className="text-gray-600 text-center">Comprehensive mock tests with detailed analysis</p>
@@ -71,8 +77,8 @@ const Home: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 0.2 }}
         >
-          <div className="flex justify-center items-center h-48 text-indigo-600">
-            <Users size={64} />
+          <div className="h-48 mb-4">
+            <Lottie animationData={successAnimation} loop={true} />
           </div>
           <h2 className="text-xl font-semibold mb-2 text-center">Track Progress</h2>
           <p className="text-gray-600 text-center">Monitor your improvement with detailed analytics</p>
@@ -85,8 +91,8 @@ const Home: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 0.3 }}
         >
-          <div className="flex justify-center items-center h-48 text-indigo-600">
-            <TrendingUp size={64} />
+          <div className="h-48 mb-4">
+            <Lottie animationData={rankingAnimation} loop={true} />
           </div>
           <h2 className="text-xl font-semibold mb-2 text-center">Compete & Excel</h2>
           <p className="text-gray-600 text-center">Compare performance with peers nationwide</p>
